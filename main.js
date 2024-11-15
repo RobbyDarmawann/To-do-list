@@ -1,38 +1,39 @@
-// Ambil elemen DOM
-const todoInput = document.getElementById("todo-input");
-const addBtn = document.getElementById("add-btn");
-const todoList = document.getElementById("todo-list");
+function addTask(day) {
+  const input = document.getElementById(`${day}-input`);
+  const taskText = input.value.trim();
 
-function addTodo() {
-  const task = todoInput.value.trim();
-
-  if (task === "") {
-    alert("Tugas tidak boleh kosong!");
+  if (taskText === "") {
+    alert("Please enter a task!");
     return;
   }
 
   const listItem = document.createElement("li");
-  listItem.textContent = task;
 
-  const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Hapus";
-  deleteBtn.classList.add("delete-btn");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.onclick = () => toggleTaskCompletion(listItem);
 
-  deleteBtn.addEventListener("click", () => {
-    todoList.removeChild(listItem);
-  });
+  const taskTextNode = document.createTextNode(taskText);
 
-  listItem.appendChild(deleteBtn);
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "Delete";
+  deleteButton.classList.add("delete-btn");
+  deleteButton.onclick = () => deleteTask(listItem);
 
-  todoList.appendChild(listItem);
+  listItem.appendChild(checkbox);
+  listItem.appendChild(taskTextNode);
+  listItem.appendChild(deleteButton);
 
-  todoInput.value = "";
+  const list = document.getElementById(`${day}-list`);
+  list.appendChild(listItem);
+
+  input.value = "";
 }
 
-addBtn.addEventListener("click", addTodo);
+function toggleTaskCompletion(listItem) {
+  listItem.classList.toggle("completed");
+}
 
-todoInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    addTodo();
-  }
-});
+function deleteTask(listItem) {
+  listItem.remove();
+}

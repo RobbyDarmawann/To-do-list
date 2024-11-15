@@ -1,76 +1,61 @@
-Berikut adalah contoh file README untuk proyek **To-Do List** menggunakan JavaScript:
+Berikut adalah contoh README untuk proyek To-Do List mingguan:
 
 ---
 
-# To-Do List
+# Weekly To-Do List
 
-Sebuah aplikasi sederhana untuk mencatat daftar tugas harian. Dibuat menggunakan HTML, CSS, dan JavaScript murni.
+A simple weekly To-Do List application built using HTML, CSS, and JavaScript. This application allows you to manage tasks for each day of the week, from Monday to Sunday. You can add new tasks, mark them as completed, and delete them when done.
 
-## Fitur
+## Features
 
-- Menambahkan tugas baru.
-- Menghapus tugas yang sudah selesai.
-- Input tugas menggunakan tombol atau tekan Enter.
-- Tampilan responsif dan sederhana.
+- **Daily Task Lists**: Separate task lists for each day of the week (Monday to Sunday).
+- **Add Tasks**: Add new tasks for each day.
+- **Mark as Completed**: Check off tasks to mark them as completed.
+- **Delete Tasks**: Remove tasks when they are no longer needed.
 
-## Cara Menggunakan
+## Getting Started
 
-1. **Clone atau Unduh Proyek**  
-   Clone repository ini atau unduh file ZIP-nya, lalu ekstrak ke komputer Anda.
+### Prerequisites
 
+To run this project, you'll need a web browser (Chrome, Firefox, Safari, etc.) and a basic code editor (like VS Code) if you want to edit the code.
+
+### Installation
+
+1. Clone this repository or download the source code.
    ```bash
-   git clone https://github.com/RobbyDarmawann/to-do-list.git
+   git clone https://github.com/RobbyDarmawann/To-do-list.git
    ```
+2. Open the project folder.
+3. Open the `index.html` file in your web browser.
 
-2. **Buka File**  
-   Buka file `index.html` di browser Anda.
+### Project Structure
 
-3. **Tambah Tugas Baru**
+- **index.html**: The main HTML file that structures the To-Do List layout.
+- **styles.css**: The CSS file that styles the To-Do List layout.
+- **main.js**: The JavaScript file that manages the functionality of the To-Do List.
 
-   - Ketikkan tugas di kotak input.
-   - Klik tombol "Tambah" atau tekan `Enter` pada keyboard.
+## Usage
 
-4. **Hapus Tugas**
-   - Klik tombol "Hapus" di samping tugas untuk menghapusnya.
+1. Open `index.html` in a web browser.
+2. To add a task for a specific day, type the task in the input box under that day's heading and click the "Add" button.
+3. Check the checkbox next to a task to mark it as completed.
+4. Click the "Delete" button to remove a task from the list.
 
-## Struktur Proyek
+## Demo
 
-```
-/todo-list
-│
-├── index.html       # Halaman utama
-├── style.css        # (Opsional) File CSS jika terpisah
-├── script.js        # Logika JavaScript
-└── README.md        # Dokumentasi proyek
-```
+![Weekly To-Do List Demo](https://path-to-screenshot.png)  
+*Example of the To-Do List layout showing tasks for different days of the week.*
 
-## Teknologi yang Digunakan
+## Customization
 
-- **HTML**: Untuk struktur halaman.
-- **CSS**: Untuk styling dasar (terintegrasi di file HTML).
-- **JavaScript**: Untuk fungsi interaktif (menambah dan menghapus tugas).
+You can customize the look and feel of this To-Do List by editing `styles.css`. For example:
+- Change colors by modifying the background and font colors.
+- Adjust spacing and font sizes to match your preferences.
 
-## Screenshot
+## Contributing
 
-### Tampilan Utama:
+Contributions are welcome! If you want to make improvements to this project, please fork the repository and create a pull request.
 
-![To-Do List Screenshot](https://via.placeholder.com/800x400.png?text=To-Do+List+App)
+## License
 
-## Kontribusi
-
-Kontribusi sangat diterima! Jika ingin menambahkan fitur baru atau memperbaiki bug, silakan lakukan langkah berikut:
-
-1. Fork repository ini.
-2. Buat branch baru untuk perubahan Anda.
-   ```bash
-   git checkout -b fitur-baru
-   ```
-3. Commit perubahan Anda.
-   ```bash
-   git commit -m "Menambahkan fitur baru"
-   ```
-4. Push ke branch Anda.
-   ```bash
-   git push origin fitur-baru
-   ```
-5. Buat Pull Request.
+This project is open-source and free to use.
